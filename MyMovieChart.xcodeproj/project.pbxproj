@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4B71C59B1CC2B3AA0010A584 /* APIList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B71C59A1CC2B3AA0010A584 /* APIList.plist */; };
+		4B71C59D1CC2C0A90010A584 /* LawListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B71C59C1CC2C0A90010A584 /* LawListViewController.swift */; };
 		4B80F1461C9EEACC008FBDFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B80F1451C9EEACC008FBDFB /* AppDelegate.swift */; };
 		4B80F1481C9EEACC008FBDFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B80F1471C9EEACC008FBDFB /* ViewController.swift */; };
 		4B80F14B1C9EEACC008FBDFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B80F1491C9EEACC008FBDFB /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		4B71C59A1CC2B3AA0010A584 /* APIList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = APIList.plist; sourceTree = "<group>"; };
+		4B71C59C1CC2C0A90010A584 /* LawListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LawListViewController.swift; sourceTree = "<group>"; };
 		4B80F1421C9EEACC008FBDFB /* MyMovieChart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMovieChart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B80F1451C9EEACC008FBDFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B80F1471C9EEACC008FBDFB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				4B71C59A1CC2B3AA0010A584 /* APIList.plist */,
 				4B80F1731C9EEB97008FBDFB /* ListViewController.swift */,
 				4B80F1801CB125BA008FBDFB /* DetailView.swift */,
+				4B71C59C1CC2C0A90010A584 /* LawListViewController.swift */,
 				4B80F1491C9EEACC008FBDFB /* Main.storyboard */,
 				4BC098821CBBF5EE00CDCD44 /* HomepageView.swift */,
 				4B80F1751C9EF695008FBDFB /* AssemblymanVO.swift */,
@@ -281,6 +284,7 @@
 				4B80F1461C9EEACC008FBDFB /* AppDelegate.swift in Sources */,
 				4B80F1781CA2D934008FBDFB /* MovieCell.swift in Sources */,
 				4BC098831CBBF5EE00CDCD44 /* HomepageView.swift in Sources */,
+				4B71C59D1CC2C0A90010A584 /* LawListViewController.swift in Sources */,
 				4B80F1741C9EEB97008FBDFB /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
