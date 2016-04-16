@@ -189,7 +189,7 @@ class ListViewController: UITableViewController, NSXMLParserDelegate {
         if let savedImage = amvo.thumnailImage{
             return savedImage
         } else {
-            var url = NSURL(string: amvo.thumbnail!)
+            let url = NSURL(string: amvo.thumbnail!)
             let imageData = NSData(contentsOfURL: url!)
             amvo.thumnailImage = UIImage(data: imageData!)
             return amvo.thumnailImage!

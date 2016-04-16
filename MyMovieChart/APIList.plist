@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>DATAORG</key>
+	<string>http://apis.data.go.kr/9710000/</string>
+	<key>NationalAssemblyInfoService</key>
+	<string>NationalAssemblyInfoService</string>
+	<key>getMemberCurrStateList</key>
+	<string>getMemberCurrStateList</string>
+	<key>getMemberDetailInfoList</key>
+	<string>getMemberDetailInfoList</string>
+	<key>ServiceKey</key>
+	<string>ServiceKey=gm9EiTUcjCNgVPZfmCXoi1r3SWqTiyqKbpa7%2FkaLRNqgKu60WbYwh0n7iPf5XdcU8mc0G0MoE1RRmz4nNZsezQ%3D%3D</string>
+</dict>
+</plist>

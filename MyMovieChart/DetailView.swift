@@ -48,7 +48,7 @@ class DetailView: UIViewController, NSXMLParserDelegate {
         Ename.text? = elements["engNm"] as! String
         PartyName.text? = elements["polyNm"] as! String
         memtitle.text? = elements["memTitle"] as! String
-        HomePage.setTitle(elements["assemHomep"] as! String, forState: UIControlState.Normal)
+        HomePage.setTitle(elements["assemHomep"] as? String, forState: UIControlState.Normal)
         //HomePage.text? = elements["assemHomep"] as! String
         
     }
