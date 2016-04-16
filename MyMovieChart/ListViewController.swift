@@ -161,7 +161,7 @@ class ListViewController: UITableViewController, NSXMLParserDelegate {
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if(segue.identifier=="segue_detail"){
+        if(segue.identifier=="segue_detail"){ //bug
             let indexPath = self.moreTable.indexPathForCell(sender as! MovieCell)/*차후 변경 예정 MovieCell*/
             Detail = (segue.destinationViewController as? DetailView)!
             Detail.department_num = (self.posts[indexPath!.row]["deptCd"] as? String)!
