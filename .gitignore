@@ -123,6 +123,4 @@ fastlane/screenshots
 ### Objective-C Patch ###
 *.xcscmblueprint
 
-Workspace Settings/
-User Data/
-Project Settings
+APIList.plist

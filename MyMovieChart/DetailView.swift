@@ -56,10 +56,18 @@ class DetailView: UIViewController, NSXMLParserDelegate {
     func beginparsing(page:Int = 1)
     {
         
-        var apiURI = NSURL(string: "http://apis.data.go.kr/9710000/NationalAssemblyInfoService/getMemberDetailInfoList?dept_cd=\(department_num!)&ServiceKey=gm9EiTUcjCNgVPZfmCXoi1r3SWqTiyqKbpa7%2FkaLRNqgKu60WbYwh0n7iPf5XdcU8mc0G0MoE1RRmz4nNZsezQ%3D%3D")
+        let path = NSBundle.mainBundle().pathForResource("APIList", ofType: "plist")
+        let dict = NSDictionary(contentsOfFile: path!)
+        let DATAORG = dict!.objectForKey("DATAORG") as! String
+        let Assemblyinfo = dict!.objectForKey("NationalAssemblyInfoService") as! String
+        let getDlist = dict!.objectForKey("getMemberDetailInfoList") as! String
+        let serviceKey = dict!.objectForKey("ServiceKey") as! String
         
+        let apiURI = NSURL(string: DATAORG + Assemblyinfo + "/" + getDlist + "?" + "dept_cd=\(department_num!)&" + serviceKey)
         
-        var apidata : NSData? = NSData(contentsOfURL: apiURI!)
+
+        
+        let apidata : NSData? = NSData(contentsOfURL: apiURI!)
         
         
         
