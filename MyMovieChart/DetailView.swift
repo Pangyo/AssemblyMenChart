@@ -11,7 +11,7 @@ import UIKit
 
 class DetailView: UIViewController, NSXMLParserDelegate {
     
-    var department_num : String = ""
+    var department_num : String? = ""
     
     @IBOutlet var Kname: UILabel!
     @IBOutlet var Cname: UILabel!
@@ -56,7 +56,7 @@ class DetailView: UIViewController, NSXMLParserDelegate {
     func beginparsing(page:Int = 1)
     {
         
-        var apiURI = NSURL(string: "http://apis.data.go.kr/9710000/NationalAssemblyInfoService/getMemberDetailInfoList?dept_cd=\(department_num)&ServiceKey=gm9EiTUcjCNgVPZfmCXoi1r3SWqTiyqKbpa7%2FkaLRNqgKu60WbYwh0n7iPf5XdcU8mc0G0MoE1RRmz4nNZsezQ%3D%3D")
+        var apiURI = NSURL(string: "http://apis.data.go.kr/9710000/NationalAssemblyInfoService/getMemberDetailInfoList?dept_cd=\(department_num!)&ServiceKey=gm9EiTUcjCNgVPZfmCXoi1r3SWqTiyqKbpa7%2FkaLRNqgKu60WbYwh0n7iPf5XdcU8mc0G0MoE1RRmz4nNZsezQ%3D%3D")
         
         
         var apidata : NSData? = NSData(contentsOfURL: apiURI!)

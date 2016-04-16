@@ -71,6 +71,7 @@ class ListViewController: UITableViewController, NSXMLParserDelegate {
             amvo.origNm = row["origNm"] as? String
             amvo.reeleGbNm = row["reeleGbNm"] as? String
             amvo.thumbnail = row["jpgLink"] as? String
+            amvo.deptCD = row["deptCd"] as? String
             self.list.append(amvo)
         }
         
@@ -164,7 +165,7 @@ class ListViewController: UITableViewController, NSXMLParserDelegate {
         if(segue.identifier=="segue_detail"){ //bug
             let indexPath = self.moreTable.indexPathForCell(sender as! MovieCell)/*차후 변경 예정 MovieCell*/
             Detail = (segue.destinationViewController as? DetailView)!
-            Detail.department_num = (self.posts[indexPath!.row]["deptCd"] as? String)!
+            Detail.department_num = self.list[indexPath!.row].deptCD
             NSLog("Touch Table Row at %d", indexPath!.row)
         }
         

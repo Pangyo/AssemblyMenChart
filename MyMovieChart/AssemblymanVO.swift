@@ -30,6 +30,8 @@ class AssemblymanVO{
     
     var reeleGbNm : String? /*당선 횟수*/
     
+    var deptCD : String? /*부서 코드*/
+    
     var rating : Float?
     
     var thumnailImage : UIImage? /*이미지 데이터*/
