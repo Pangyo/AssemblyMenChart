@@ -46,11 +46,11 @@ class ListViewController: UITableViewController, NSXMLParserDelegate {
 
     func beginparsing(page:Int = 1)
     {
+        let pageListNum = 10
+        let apiURI = NSURL(string: "http://apis.data.go.kr/9710000/NationalAssemblyInfoService/getMemberCurrStateList?ServiceKey=gm9EiTUcjCNgVPZfmCXoi1r3SWqTiyqKbpa7%2FkaLRNqgKu60WbYwh0n7iPf5XdcU8mc0G0MoE1RRmz4nNZsezQ%3D%3D&numOfRows=\(pageListNum)&pageNo=\(page)")
         
-        var apiURI = NSURL(string: "http://apis.data.go.kr/9710000/NationalAssemblyInfoService/getMemberCurrStateList?ServiceKey=gm9EiTUcjCNgVPZfmCXoi1r3SWqTiyqKbpa7%2FkaLRNqgKu60WbYwh0n7iPf5XdcU8mc0G0MoE1RRmz4nNZsezQ%3D%3D&pageNo=\(page)")
         
-        
-        var apidata : NSData? = NSData(contentsOfURL: apiURI!)
+        let apidata : NSData? = NSData(contentsOfURL: apiURI!)
         
         var amvo : AssemblymanVO
         
@@ -65,14 +65,17 @@ class ListViewController: UITableViewController, NSXMLParserDelegate {
         parser.parse()
         
 
-        for row in self.posts{
+        
+        for(var i = (page-1)*10; i < ((page-1)*10)+10 ; i++)
+        {
             amvo = AssemblymanVO()
-            amvo.Kname = row["name"] as? String
-            amvo.origNm = row["origNm"] as? String
-            amvo.reeleGbNm = row["reeleGbNm"] as? String
-            amvo.thumbnail = row["jpgLink"] as? String
-            amvo.deptCD = row["deptCd"] as? String
+            amvo.Kname = (self.posts[i])["name"] as? String
+            amvo.origNm = (self.posts[i])["origNm"] as? String
+            amvo.reeleGbNm = (self.posts[i])["reeleGbNm"] as? String
+            amvo.thumbnail = (self.posts[i])["jpgLink"] as? String
+            amvo.deptCD = (self.posts[i])["deptCd"] as? String
             self.list.append(amvo)
+            
         }
         
 
